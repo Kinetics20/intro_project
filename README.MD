@@ -7,8 +7,6 @@ This project utilizes:
 - **mypy** ✅ – for static type checking,
 - **pytest** 🧪 – for unit testing.
 
----
-
 ## Project Overview 📚
 
 The project implements a simple `BankAccount` class with the following functionalities:
@@ -18,8 +16,6 @@ The project implements a simple `BankAccount` class with the following functiona
 - Handling errors, such as trying to withdraw more money than available.
 
 The project also includes unit tests to ensure code correctness.
-
----
 
 ## Requirements 🖥️
 
