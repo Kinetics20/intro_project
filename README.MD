@@ -24,8 +24,6 @@ The project also includes unit tests to ensure code correctness.
 - **mypy** 1.5.0 or newer
 - **pytest** 7.0.0 or newer
 
----
-
 ## Installation 🚀
 
 ### 1. Clone the repository:
@@ -93,11 +91,7 @@ mypy bank_account.py
 - `get_balance() -> str`  
   Returns the balance formatted as "xx.xx PLN".
 
----
-
 ## Contribution 🤝
 
 Feel free to submit pull requests with improvements and suggestions.  
 This project was created for educational purposes and to improve Python skills! 🌟
-
----
