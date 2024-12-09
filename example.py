@@ -1,3 +1,4 @@
+from collections.abc import Sequence
 from typing import Literal, TypeVar
 
 
@@ -18,9 +19,21 @@ def combine(a: T, b: T) -> list[T]:
 res1 = combine(1, 2)
 res2 = combine('my home', 'is Poland')
 
+# Union
+
+# def combine_1(a: int | str, b: int | str) -> int | str:
+#     return a + b
+#
+# r_1 = combine_1(1, 2)
+# r_2 = combine_1('my home', 'is Poland')
+
+
 # TODO launch file using in terminal mypy example.py
 
-def magic(data: tuple[int, ...]) -> int:
+# def magic(data: tuple[int, ...]) -> int:
+#     return data[0]
+
+def magic(data: Sequence[int, ...]) -> int:
     return data[0]
 
 v = magic((1, 2, 3))
