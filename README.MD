@@ -76,13 +76,10 @@ pytest
 ```
 ---
 
-
 ### Type Checking ✅
 ```bash
 mypy bank_account.py
 ```
-
----
 
 ## Features 🔧
 
@@ -100,11 +97,11 @@ mypy bank_account.py
 - `get_balance() -> str`  
   Returns the balance formatted as "xx.xx PLN".
 
-
 ---
-
 
 ## Contribution 🤝
 
 Feel free to submit pull requests with improvements and suggestions.  
 This project was created for educational purposes and to improve Python skills! 🌟
+
+---
