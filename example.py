@@ -49,3 +49,25 @@ v2 = magic((1, 2))
 v3 = magic((3.1, 2))
 v4 = magic(('home', '3'))
 
+# TODO str | int , union , means str or int
+
+countries: dict[str | int, str] = {
+    'Poland': 'Warsaw',
+    'Germany': 'Berlin',
+    444: 'New York',
+}
+
+DictInsideType = dict[str | int, str]
+DictWholeType = dict[str, DictInsideType]
+
+countries_2: DictWholeType = {
+    'Europe': {
+    'Poland': 'Warsaw',
+    'Germany': 'Berlin',
+    444: 'New York',
+    },
+    'Asia':{
+        'China': 'Beijing',
+        'Vietnam': 'Hanoi',
+    }
+}
