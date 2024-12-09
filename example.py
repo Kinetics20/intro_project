@@ -20,7 +20,7 @@ res2 = combine('my home', 'is Poland')
 
 # TODO launch file using in terminal mypy example.py
 
-def magic(data: tuple) -> tuple:
+def magic(data: tuple[int, int, int]) -> int:
     return data[0]
 
 v = magic((1, 2, 3))
