@@ -1,5 +1,5 @@
 from collections.abc import Sequence
-from typing import Literal, TypeVar
+from typing import Literal, TypeVar, Callable
 
 from example_types import DictWholeType
 
@@ -73,3 +73,15 @@ countries_2: DictWholeType = {
         'Vietnam': 'Hanoi',
     }
 }
+
+def my_max(*args: int) -> int:
+    return max(args)
+
+x_1 = my_max(1, 2, 3, 4)
+
+# TODO Callable from typing , means what we can do execute , i.e. functions named anonymous and classes with __call_
+
+def sentence(cb: Callable, txt: str) -> str:
+    return cb(txt)
+
+sentence (lambda x: x.upper, 'ala ma kota')
