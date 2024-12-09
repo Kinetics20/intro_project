@@ -84,8 +84,8 @@ x_1 = my_max(1, 2, 3, 4)
 Z = TypeVar('Z')
 X = TypeVar('X')
 
-def sentence(cb: Callable[[Z], X], txt: Z) -> X:
-    return cb(txt)
+def sentence(cb: Callable[[Z], X], txt: Z) -> list[X]:
+    return [cb(txt)]
 
 sentence (lambda x: x.upper(), 'ala ma kota')
 sentence (lambda x: str(x).upper(), '42')
