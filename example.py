@@ -30,11 +30,22 @@ res2 = combine('my home', 'is Poland')
 
 # TODO launch file using in terminal mypy example.py
 
+# TODO tuple[int, ...] , for tuple with unlimited elements
+
 # def magic(data: tuple[int, ...]) -> int:
 #     return data[0]
 
-def magic(data: Sequence[int, ...]) -> int:
+# TODO Sequence | from collections.abc import Sequence , for any collections match to sequence protocol
+# Sequence replaces ellipsis [...]
+
+U = TypeVar('U')
+# TODO U = TypeVar('U') , created object U presents any type of data element in collection ( generic typing)
+
+def magic(data: Sequence[U]) -> U:
     return data[0]
 
 v = magic((1, 2, 3))
 v2 = magic((1, 2))
+v3 = magic((3.1, 2))
+v4 = magic(('home', '3'))
+
