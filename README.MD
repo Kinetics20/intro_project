@@ -60,12 +60,8 @@ pip install mypy
 
 # Windows (Command Prompt or PowerShell)
 pip install mypy
-
-### Running Tests 🧪
-```bash
-# Run all unit tests using pytest
-pytest
 ```
+
 ### 5. Install `pytest` for running tests:
 ```bash
 # Linux/macOS
@@ -74,7 +70,10 @@ pip install pytest
 # Windows (Command Prompt or PowerShell)
 pip install pytest
 ```
-
+### Running Tests 🧪
+```bash
+pytest
+```
 ---
 
 
