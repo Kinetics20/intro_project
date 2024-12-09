@@ -1,6 +1,8 @@
 from collections.abc import Sequence
 from typing import Literal, TypeVar
 
+from example_types import DictWholeType
+
 
 def add(a: int, b: int) -> int:
     return a + b
@@ -57,8 +59,8 @@ countries: dict[str | int, str] = {
     444: 'New York',
 }
 
-DictInsideType = dict[str | int, str]
-DictWholeType = dict[str, DictInsideType]
+# DictInsideType = dict[str | int, str]
+# DictWholeType = dict[str, DictInsideType]
 
 countries_2: DictWholeType = {
     'Europe': {
