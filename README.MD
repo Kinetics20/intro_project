@@ -68,7 +68,6 @@ pip install pytest
 ```bash
 pytest
 ```
----
 
 ### Type Checking ✅
 ```bash
