@@ -82,8 +82,11 @@ x_1 = my_max(1, 2, 3, 4)
 # TODO Callable from typing , means what we can do execute , i.e. functions named anonymous and classes with __call_
 
 Z = TypeVar('Z')
+X = TypeVar('X')
 
-def sentence(cb: Callable[[Z], Z], txt: Z) -> Z:
+def sentence(cb: Callable[[Z], X], txt: Z) -> X:
     return cb(txt)
 
 sentence (lambda x: x.upper(), 'ala ma kota')
+sentence (lambda x: str(x).upper(), '42')
+sentence (lambda x: str(x).upper(), 42)
