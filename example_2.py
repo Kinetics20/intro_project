@@ -58,3 +58,45 @@ print(y_7, y_8, sep='\n')
 
 x_8 = OrderedDict([(1, 2), (3, 4), (5, 6)])
 print(y_8.get(999, 42))
+
+class Magic:
+    def __hash__(self):
+        return 42
+
+    def __eq__(self, other):
+        return True
+
+    # def __str__(self):
+    #     return "yolo"
+    #
+    # __repr__ = __str__
+
+
+def magic_fn():
+    ...
+
+
+x_10 = {
+    1: 0,
+    False: 1,
+    True: 2,
+    0: 3,
+    "ala": 4,
+    "": 5,
+    "": 6,
+    (1,): 7,
+    (1, 2): 8,
+    None: 9,
+    Magic: 10,
+    Magic(): 11,
+    magic_fn: 12,
+    Magic(): 13
+}
+
+print(x_10)
+#
+# print(x[0.0000000000000])
+# print(x[0])
+# print(x[False])
+
+print(x_10[Magic()])
