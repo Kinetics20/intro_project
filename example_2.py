@@ -100,3 +100,12 @@ print(x_10)
 # print(x[False])
 
 print(x_10[Magic()])
+
+# TODO we can use * to unpack any Sequence (list, tuple, str ...)
+print(*range(0, 10))
+print(*range(10))
+print(*range(2, 11))
+print(*range(2, 11, 3))
+print(*range(10, 1, -1))
+print([x / 10 for x in range(0, 11, 1) ])
+
