@@ -7,19 +7,21 @@ from bank_account import BankAccount
 
 @pytest.fixture(scope='function')
 def empty_account():
-    print('\nFixture\n')
-    return BankAccount('Johny', '')
+    '''Fixture for empty bank account'''
+    yield BankAccount('Johny', '')
 
 
-def test_initial_default_balance(empty_account):
-    print('\nSTH balance\n')
+@pytest.fixture
+def account_with_balance():
+    '''Fixture for bank account with balance'''
+    return BankAccount('Johny', '', balance=Decimal('100.00'))
+
+
+def test_initial_balance(empty_account, account_with_balance):
     assert empty_account.balance == Decimal('0.0')
+    assert account_with_balance.balance == Decimal('100.00')
 
 
 def test_deposit(empty_account):
-    print('\nSTH balance___________2\n')
     empty_account.deposit(Decimal('21.37'))
     assert empty_account.balance == Decimal('21.37')
-
-
-# def withdraw():
