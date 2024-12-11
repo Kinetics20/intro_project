@@ -14,3 +14,7 @@ def test_divide_numbers_negative():
 def test_divide_with_zero():
     with pytest.raises(ZeroDivisionError):
         divide(10, 0)
+
+
+def test_divide_floats():
+    assert divide(1, 3) == pytest.approx(0.3333333, rel=1e-6)
