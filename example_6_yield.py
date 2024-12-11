@@ -33,3 +33,9 @@ print(next(e))
 
 for m in magic_2():
     print(e)
+
+print('\033[96m' + ('-' * 40) + '\033[00m')
+print('value'.center(40))
+print('\033[96m' + ('-' * 40) + '\033[00m')
+
+
