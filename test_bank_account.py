@@ -25,3 +25,8 @@ def test_initial_balance(empty_account, account_with_balance):
 def test_deposit(empty_account):
     empty_account.deposit(Decimal('21.37'))
     assert empty_account.balance == Decimal('21.37')
+
+
+def test_withdraw_insufficient_funds(empty_account):
+    with pytest.raises(ValueError, match='Insufficient funds'):
+        empty_account.withdraw(Decimal('0.50'))
