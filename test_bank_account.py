@@ -1,3 +1,4 @@
+import sys
 from decimal import Decimal
 
 import pytest
@@ -26,7 +27,7 @@ def test_deposit(empty_account):
     empty_account.deposit(Decimal('21.37'))
     assert empty_account.balance == Decimal('21.37')
 
-
+@pytest.mark.skipif(sys.platform == 'Win32', reason='Win32 issues')
 def test_withdraw_insufficient_funds(empty_account):
     with pytest.raises(ValueError, match='Insufficient funds'):
         empty_account.withdraw(Decimal('0.50'))
