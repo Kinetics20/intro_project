@@ -35,3 +35,16 @@ def test_deposit(empty_account):
 def test_withdraw_insufficient_funds(empty_account):
     with pytest.raises(ValueError, match='Insufficient funds'):
         empty_account.withdraw(Decimal('0.50'))
+
+
+@pytest.mark.parametrize(
+    'initial_balance, deposit_amount',
+    [
+        pytest.param(Decimal('0.0'), Decimal('0.0'), id='Case deposit 0'),
+        pytest.param(Decimal('0.0'), Decimal('-50.0'), id='Case deposit negative'),
+    ]
+)
+def test_deposit_failure(initial_balance: Decimal, deposit_amount: Decimal):
+    account = BankAccount('Mike', '', initial_balance)
+    with pytest.raises(ValueError, match='Deposit amount must be positive'):
+        account.deposit(deposit_amount)
